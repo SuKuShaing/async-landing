@@ -8,7 +8,8 @@ const options = {
 	}
 };
 
-const content = null || document.getElementById('content');
+// const content = null || document.getElementById('content');
+const content = document.getElementById('content');
 
 async function fetchData(urlApi) {
     const response = await fetch(urlApi, options);//recibe la respuesta y la guarda
@@ -34,10 +35,11 @@ async function fetchData(urlApi) {
                 </div>
             </div>
         `).slice(0,4).join('')}
-            
         `;
-    } catch {
-
+        content.innerHTML = view;
+    } catch (err){
+      console.log(err);
+      //aquí se puede color un mensaje en html para decirle al usuario que fallo algo
     }
 }) ();
 
