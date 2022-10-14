@@ -41,7 +41,8 @@ async function fetchData(urlApi) {
       console.log(err);
       //aquí se puede color un mensaje en html para decirle al usuario que fallo algo
     }
-}) ();
+}) (); //Las expresiones de función ejecutadas inmediatamente (IIFE por su sigla en inglés) son funciones que se ejecutan tan pronto como se definen.
+//se engloban en paréntesis y son de scope aislado  
 
 
 
